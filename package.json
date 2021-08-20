@@ -1,0 +1,36 @@
+{
+  "name": "aws-kms-node-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvillane/aws-kms-node-poc.git"
+  },
+  "keywords": [
+    "aws",
+    "kms",
+    "node",
+    "encrypt",
+    "decrypt"
+  ],
+  "author": "Julio Villane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvillane/aws-kms-node-poc/issues"
+  },
+  "homepage": "https://github.com/jvillane/aws-kms-node-poc#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.2",
+    "aws-sdk": "^2.972.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  }
+}
