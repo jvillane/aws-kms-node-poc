@@ -1,0 +1,74 @@
+### Linux ###
+*~
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# NPM registry configurations
+/**/.npmrc
+
+# Distribution folder
+dist
+packages/*/lib
+!packages/hermod/lib
+**/cdk.out
+packages/*/dist
+
+# Dependency directories
+node_modules/
+
+# Dependency directories
+packaged.yaml
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# transpiled code
+*.d.ts
+*.js.map
+*.js
+!script/sha.js
+!config-overrides.js
+!jest.*
+!packages/thor-front/**/*.(d.ts|js)
+!packages/loki-front/**/*.(d.ts|js)
+!packages/**/jest-dynamodb-config.js
+
+.idea/
+
+!yarn.lock
+/**/package-lock.json
+/**/jest.setup.js
+/**/parameters.properties
+jest_html_reporters.html
+*.swp
+**/deploy-jr.sh
+**/my-deply.sh
+**/cp-deploy.sh
+**/jest_html_reporters.html
+*.icloud
+
+**/.env
+**/.env.development
+
+**/*.ignore
+remove-all-stack.sh
+**/cdk.out/
+**/variables.env
+

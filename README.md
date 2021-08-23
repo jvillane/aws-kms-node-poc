@@ -67,10 +67,19 @@ $ openssl rsautl -encrypt -in generated-key.bin -oaep -inkey public-key.bin -key
 ### Step 4 - Import your key material
 
 ```bash
-$ aws kms import-key-material --key-id your-key-id --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_EXPIRES --valid-to 2021-02-01T12:00:00-08:00
-$ aws kms import-key-material --key-id your-key-id --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_DOES_NOT_EXPIRE
+$ aws kms import-key-material --key-id [your-key-id] --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_EXPIRES --valid-to 2021-02-01T12:00:00-08:00
+$ aws kms import-key-material --key-id [your-key-id] --encrypted-key-material fileb://WrappedKeyMaterial.bin --import-token fileb://token.bin --expiration-model KEY_MATERIAL_DOES_NOT_EXPIRE
+```
+
+## Decrypt an encrypted text
+
+It's feasible to use the aws-cli to decrypt an encrypted value using:
+
+```bash
+$ aws kms decrypt --ciphertext-blob [the-encrypted-text] --key-id [your-key-id] --output text --query Plaintext | base64 --decode
 ```
 
 ## References
 
 1. [aws-kms-workshop](https://github.com/aws-samples/aws-kms-workshop)
+2. [aws-cli-kms-decrypt-reference](https://docs.aws.amazon.com/cli/latest/reference/kms/decrypt.html)
